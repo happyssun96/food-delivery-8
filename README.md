@@ -31,7 +31,7 @@ www.msaez.io/#/storming/eLZXDH2NciQcX7mpy0NETVpVT353/3cd164530fa17c1c886b1f4dc39
 <img width="377" alt="image" src="https://user-images.githubusercontent.com/59468442/203252901-b2673da0-d1dd-4f75-9dab-4870a4eecd4e.png">
 
 ## CQRS
-주문하고 결재됨에 따라 주문 상태가 Update 됩니다.
+- 주문하고 결재됨에 따라 주문 상태가 Update 됩니다.
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/59468442/203256630-7272cac3-ddf2-4fcb-8128-fabed67f7ab9.png">
 <img width="562" alt="image" src="https://user-images.githubusercontent.com/59468442/203255805-690224a8-6261-4c0b-9d7a-fd7545964aa9.png">
 <img width="572" alt="image" src="https://user-images.githubusercontent.com/59468442/203255860-64efeb50-2033-4ebf-800e-51ec6c4f107e.png">

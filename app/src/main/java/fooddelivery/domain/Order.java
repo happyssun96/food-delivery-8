@@ -109,7 +109,7 @@ public class Order  {
         
         repository().findById(accepted.getId()).ifPresent(order->{
             
-            order.status = "주문 수락"; // do something
+            order.status = "Order Accepted"; // do something
             repository().save(order);
 
 
@@ -126,16 +126,16 @@ public class Order  {
 
         */
 
-        /** Example 2:  finding and process
+        // * Example 2:  finding and process
         
-        repository().findById(rejected.get???()).ifPresent(order->{
+        repository().findById(rejected.getId()).ifPresent(order->{
             
-            order // do something
+            order.status = "Order Rejected"; // do something
             repository().save(order);
 
 
          });
-        */
+       
 
         
     }
@@ -147,16 +147,16 @@ public class Order  {
 
         */
 
-        /** Example 2:  finding and process
+        // * Example 2:  finding and process
         
-        repository().findById(cooked.get???()).ifPresent(order->{
+        repository().findById(cooked.getId()).ifPresent(order->{
             
-            order // do something
+            order.status = "Order Cooked"; // do something
             repository().save(order);
 
 
          });
-        */
+       
 
         
     }

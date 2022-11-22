@@ -9,91 +9,69 @@ import lombok.Data;
 import java.util.Date;
 
 @Entity
-@Table(name="Payment_table")
+@Table(name = "Payment_table")
 @Data
 
-public class Payment  {
+public class Payment {
 
-    
     @Id
-    @GeneratedValue(strategy=GenerationType.AUTO)
-    
-    
-    
-    
-    
+    @GeneratedValue(strategy = GenerationType.AUTO)
+
     private Long id;
-    
-    
-    
-    
-    
+
     private Long orderId;
 
     @PostPersist
-    public void onPostPersist(){
-
+    public void onPostPersist() {
 
         Paid paid = new Paid(this);
         paid.publishAfterCommit();
-
-
 
         Refunded refunded = new Refunded(this);
         refunded.publishAfterCommit();
 
     }
 
-    public static PaymentRepository repository(){
+    public static PaymentRepository repository() {
         PaymentRepository paymentRepository = PayApplication.applicationContext.getBean(PaymentRepository.class);
         return paymentRepository;
     }
 
+    public static void cancelPayment(OrderCanceled orderCanceled) {
 
+        /**
+         * Example 1: new item
+         * Payment payment = new Payment();
+         * repository().save(payment);
+         * 
+         */
 
+        // * Example 2: finding and process
 
-    public static void cancelPayment(OrderCanceled orderCanceled){
+        Payment py = repository().findByOrderId(orderCanceled.getId());
+        if (py.orderId == orderCanceled.getId()) {
+            repository().save(py);
 
-        /** Example 1:  new item 
-        Payment payment = new Payment();
-        repository().save(payment);
+        }
 
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(orderCanceled.get???()).ifPresent(payment->{
-            
-            payment // do something
-            repository().save(payment);
-
-
-         });
-        */
-
-        
-    }
-    public static void cancelPayment(Rejected rejected){
-
-        /** Example 1:  new item 
-        Payment payment = new Payment();
-        repository().save(payment);
-
-        */
-
-        /** Example 2:  finding and process
-        
-        repository().findById(rejected.get???()).ifPresent(payment->{
-            
-            payment // do something
-            repository().save(payment);
-
-
-         });
-        */
-
-        
     }
 
+    public static void cancelPayment(Rejected rejected) {
+
+        /**
+         * Example 1: new item
+         * Payment payment = new Payment();
+         * repository().save(payment);
+         * 
+         */
+
+        // * Example 2: finding and process
+
+        Payment py = repository().findByOrderId(rejected.getId());
+        if (py.orderId == rejected.getId()) {
+            repository().save(py);
+        }
+
+    }
 
 }

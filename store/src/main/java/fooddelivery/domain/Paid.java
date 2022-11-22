@@ -1,14 +1,15 @@
 package fooddelivery.domain;
 
+import fooddelivery.domain.*;
 import fooddelivery.infra.AbstractEvent;
-import lombok.Data;
 import java.util.*;
+import lombok.*;
 
 @Data
-public class DeliveryStarted extends AbstractEvent {
+@ToString
+public class Paid extends AbstractEvent {
 
     private Long id;
-    private String address;
     private Long orderId;
 
     public Long getId() {
@@ -17,14 +18,6 @@ public class DeliveryStarted extends AbstractEvent {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public String getAddress() {
-        return this.address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
     }
 
     public Long getOrderId() {

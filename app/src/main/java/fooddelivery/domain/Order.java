@@ -76,9 +76,6 @@ public class Order  {
         OrderPlaced orderPlaced = new OrderPlaced(this);
         orderPlaced.publishAfterCommit();
 
-    }
-    @PostRemove
-    public void onPostRemove(){
 
 
         OrderCanceled orderCanceled = new OrderCanceled(this);

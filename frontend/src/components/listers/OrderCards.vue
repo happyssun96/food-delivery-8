@@ -72,7 +72,7 @@
                 'customerId': '',
                 'preference': '',
                 'options': '',
-                'address': {},
+                'address': '',
                 'status': '',
             }
         },

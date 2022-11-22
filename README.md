@@ -59,6 +59,7 @@ www.msaez.io/#/storming/eLZXDH2NciQcX7mpy0NETVpVT353/3cd164530fa17c1c886b1f4dc39
 <img width="391" alt="image" src="https://user-images.githubusercontent.com/59468442/203260140-85661366-9854-496d-8908-8dd1417808e5.png">
 
 ## Circuit Breaker
+<img width="346" alt="image" src="https://user-images.githubusercontent.com/59468442/203260549-ca1e18cf-3ecb-4571-8f46-33ba94ba169e.png">
 
 ## Gateway
 ```

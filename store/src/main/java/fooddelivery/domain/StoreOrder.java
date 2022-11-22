@@ -68,7 +68,7 @@ public class StoreOrder {
 
         // Example 2: finding and process
         StoreOrder st = repository().findByOrderId(orderCanceled.getId());
-        if (st.status == "Started") {
+        if (st.status == "Cooked") {
             st.status = "Order Canceled"; // do something
             repository().save(st);
         }

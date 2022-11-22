@@ -90,6 +90,48 @@ public class StoreOrder  {
     public void startCook(){
     }
 
+    public static void updateStoreStatus(OrderCanceled orderCanceled){
+
+        /** Example 1:  new item 
+        StoreOrder storeOrder = new StoreOrder();
+        repository().save(storeOrder);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(orderCanceled.get???()).ifPresent(storeOrder->{
+            
+            storeOrder // do something
+            repository().save(storeOrder);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateStoreStatus(Delivered delivered){
+
+        /** Example 1:  new item 
+        StoreOrder storeOrder = new StoreOrder();
+        repository().save(storeOrder);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(delivered.get???()).ifPresent(storeOrder->{
+            
+            storeOrder // do something
+            repository().save(storeOrder);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

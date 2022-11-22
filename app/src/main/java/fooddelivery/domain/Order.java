@@ -50,9 +50,9 @@ public class Order  {
     
     
     
-    @Embedded
     
-    private Address address;
+    
+    private String address;
     
     
     
@@ -97,6 +97,69 @@ public class Order  {
 
 
 
+    public static void updateOrderStatus(Accepted accepted){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(accepted.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateOrderStatus(Rejected rejected){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(rejected.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
+    public static void updateOrderStatus(Cooked cooked){
+
+        /** Example 1:  new item 
+        Order order = new Order();
+        repository().save(order);
+
+        */
+
+        /** Example 2:  finding and process
+        
+        repository().findById(cooked.get???()).ifPresent(order->{
+            
+            order // do something
+            repository().save(order);
+
+
+         });
+        */
+
+        
+    }
 
 
 }

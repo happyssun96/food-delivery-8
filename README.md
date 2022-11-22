@@ -56,8 +56,39 @@ www.msaez.io/#/storming/eLZXDH2NciQcX7mpy0NETVpVT353/3cd164530fa17c1c886b1f4dc39
 ```
 
 ## Request / Response
+<img width="391" alt="image" src="https://user-images.githubusercontent.com/59468442/203260140-85661366-9854-496d-8908-8dd1417808e5.png">
 
 ## Circuit Breaker
 
 ## Gateway
-<img width="251" alt="image" src="https://user-images.githubusercontent.com/59468442/203258508-f30110a4-461a-4ccc-a94b-db53e0bdbbaa.png">
+```
+spring:
+  profiles: default
+  cloud:
+    gateway:
+      routes:
+        - id: app
+          uri: http://localhost:8081
+          predicates:
+            - Path=/orders/**, 
+        - id: store
+          uri: http://localhost:8082
+          predicates:
+            - Path=/storeOrders/**, 
+        - id: delivery
+          uri: http://localhost:8083
+          predicates:
+            - Path=/deliveries/**, 
+        - id: customer
+          uri: http://localhost:8084
+          predicates:
+            - Path=/notificationLogs/**, /orderStatuses/**
+        - id: pay
+          uri: http://localhost:8085
+          predicates:
+            - Path=/payments/**, 
+        - id: frontend
+          uri: http://localhost:8080
+          predicates:
+            - Path=/**
+```

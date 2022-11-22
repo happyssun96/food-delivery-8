@@ -35,3 +35,29 @@ www.msaez.io/#/storming/eLZXDH2NciQcX7mpy0NETVpVT353/3cd164530fa17c1c886b1f4dc39
 <img width="555" alt="image" src="https://user-images.githubusercontent.com/59468442/203256630-7272cac3-ddf2-4fcb-8128-fabed67f7ab9.png">
 <img width="562" alt="image" src="https://user-images.githubusercontent.com/59468442/203255805-690224a8-6261-4c0b-9d7a-fd7545964aa9.png">
 <img width="572" alt="image" src="https://user-images.githubusercontent.com/59468442/203255860-64efeb50-2033-4ebf-800e-51ec6c4f107e.png">
+
+## Compensation / Correlation
+```
+@PrePersist
+    public void onPrePersist() {
+    }
+
+    @PreRemove
+    public void onPreRemove() {
+        if (this.getStatus().equals("Cooked")) {
+            System.out.println("\n\n##### 이미 조리가 시작되었습니다. 취소하실 수 없습니다. \n\n");
+        }
+    }
+
+    public static OrderRepository repository() {
+        OrderRepository orderRepository = AppApplication.applicationContext.getBean(OrderRepository.class);
+        return orderRepository;
+    }
+```
+
+## Request / Response
+
+## Circuit Breaker
+
+## Gateway
+<img width="251" alt="image" src="https://user-images.githubusercontent.com/59468442/203258508-f30110a4-461a-4ccc-a94b-db53e0bdbbaa.png">

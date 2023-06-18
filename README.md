@@ -4,6 +4,7 @@
 
 본 예제는 MSA/DDD/Event Storming/EDA 를 포괄하는 분석/설계/구현/운영 전단계를 커버하도록 구성한 예제입니다.
 이는 클라우드 네이티브 애플리케이션의 개발에 요구되는 체크포인트들을 통과하기 위한 예시 답안을 포함합니다.
+(https://labs.msaez.io/#/courses/cna-full/99e33670-6186-11ed-87aa-1fcf8b5a8b09)
 
 ## Event Storming
 www.msaez.io/#/storming/eLZXDH2NciQcX7mpy0NETVpVT353/3cd164530fa17c1c886b1f4dc39467e4
